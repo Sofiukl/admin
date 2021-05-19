@@ -29,7 +29,7 @@ const { create } = require("domain");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: `https://${PROJECT_NAME}.firebaseio.com`,
+  databaseURL: `https://${process.env.PROJECT_NAME}.firebaseio.com`,
 });
 
 // Express seup
