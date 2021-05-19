@@ -1,0 +1,31 @@
+{
+  "name": "user-service",
+  "version": "1.0.0",
+  "description": "This service will be used for user related operations",
+  "main": "main.js",
+  "scripts": {
+    "start": "pm2 start main.js",
+    "stop": "pm2 stop main",
+    "restart": "pm2 restart main",
+    "server:status": "pm2 status main.js",
+    "server:monitor": "pm2 monit main.js",
+    "server:logs": "pm2 logs --lines 1000",
+    "dev": "node main.js",
+    "debug": "nodemon --inspect main.js",
+    "test": "mocha  --timeout 30000",
+    "coverage": "nyc --cache-dir=./reports/coverage/cache --report-dir=./reports/coverage --temp-dir=./reports/coverage/.nyc_temp --reporter=html --reporter=text --reporter=lcov --all node_modules/.bin/mocha --exit"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.8.0",
+    "fs": "0.0.1-security"
+  },
+  "keywords": [
+    "my-company",
+    "user"
+  ]
+}
